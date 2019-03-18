@@ -11,18 +11,19 @@ class OpenOne:
     def main(self):
         self.open_one_file()
 
-
-
     def open_one_file(self):
         import os
-        # 使用os.system()函数打开记事本程序
-        self.process_name_list.process_is_running()
-        os.system('notepad')
+        # for 循环
+        # 判断程序是否正在允许
+        # 一个程序名称就是配置文件中的一个头
+        running = self.process_name_list.process_is_running('idea.exe')
+        if(running == False):
+            # 执行对应的程序
+            os.system('idea.exe')
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    one.read_config_from_py_file()
 
     # from src.main.python.utils.ProcessNameList import ProcessNameList
     # name_list = ProcessNameList()
