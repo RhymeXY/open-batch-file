@@ -7,7 +7,7 @@ class ProcessNameList:
         name = self.get_process_name_list()
         return name
 
-    # 当前进程的进程名list
+    # 当前正在允许的进程名list
     def get_process_name_list(self):
         names = []
 
