@@ -1,3 +1,6 @@
+import psutil
+
+
 class ProcessNameList:
 
     def __init__(self):
@@ -10,8 +13,6 @@ class ProcessNameList:
     # 当前正在允许的进程名list
     def get_process_name_list(self):
         names = []
-
-        import psutil
 
         for proc in psutil.process_iter():
             try:
