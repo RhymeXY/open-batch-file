@@ -3,7 +3,8 @@ import configparser
 
 class ReadConfig:
 
-    # 读取配置文件的类
+    # 读取配置文件的类configparser.ConfigParser()
+    # 私有的属性
     __cf = configparser.ConfigParser()
     __config_file_path = str()
 
