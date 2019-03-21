@@ -1,10 +1,10 @@
 from src.main.python.utils.ReadConfig import ReadConfig
+from src.main.python.utils.ProcessNameList import ProcessNameList
 import os
 
 
 class OpenBatch:
     # 公共属性
-    from src.main.python.utils.ProcessNameList import ProcessNameList
     process_name_list = ProcessNameList()
     # 私有属性
     _open_files = []
@@ -32,8 +32,3 @@ if __name__ == '__main__':
     batch = OpenBatch()
     batch.open_batch_file('../config/processes.properties')
 
-# from src.main.python.utils.ProcessNameList import ProcessNameList
-# name_list = ProcessNameList()
-# list_main = name_list.main()
-# print(list_main)
-# print(name_list.process_is_running('System'))
